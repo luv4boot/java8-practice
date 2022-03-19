@@ -1,4 +1,4 @@
-package com.realtime.interviews;
+package com.realtime.interviews.java8;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

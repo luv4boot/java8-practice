@@ -1,4 +1,4 @@
-package com.realtime.interviews;
+package com.realtime.interviews.java8;
 
 import java.util.Arrays;
 import java.util.List;

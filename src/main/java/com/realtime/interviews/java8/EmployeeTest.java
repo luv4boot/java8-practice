@@ -1,4 +1,4 @@
-package com.realtime.interviews;
+package com.realtime.interviews.java8;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -94,9 +94,15 @@ public class EmployeeTest {
         //who is the oldest employee in the organization? what is his age and which department he belongs to?
         Optional<Employee> oldestEmployeeWrapper = employees.stream().max(Comparator.comparingInt(Employee::getAge));
         Employee oldestEmployee = oldestEmployeeWrapper.get();
-        System.out.println("\nName: "+oldestEmployee.getName());
-        System.out.println("Age: "+oldestEmployee.getAge());
-        System.out.println("Department: "+oldestEmployee.getDepartment());
+        System.out.println("\nName: " + oldestEmployee.getName());
+        System.out.println("Age: " + oldestEmployee.getAge());
+        System.out.println("Department: " + oldestEmployee.getDepartment());
+
+
+        //fetch all employee names with , delimiter
+        System.out.println("\n----------------");
+        String names = employees.stream().map(employee -> employee.getName().toUpperCase()).collect(Collectors.joining(", "));
+        System.out.println(names);
 
     }
 }
